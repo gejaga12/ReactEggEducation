@@ -8,7 +8,7 @@ class RickAndMortyService {
         return resp.json();
     };
 
-    async traerPersonajesPorId(){
+    async traerPersonajesPorId(id){
         const resp = await fetch(API_RM.PERSONAJES_BY_ID(id));
         return resp.json();
     };

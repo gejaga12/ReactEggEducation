@@ -1,25 +1,13 @@
 import React from "react";
 
-export const Card = () => {
+export const Card = ({ mascota }) => {
   return (
     <div className="col">
       <div className="card shadow-sm">
-        <svg
-          className="bd-placeholder-img card-img-top"
-          width="100%"
-          height="225"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: Thumbnail"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#55595c" />
-          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-            Carta
-          </text>
-        </svg>
+        <img width="100%" src={mascota.image} alt="imagen"></img>
+
+        <h5 className="mb-0 mt-2 ms-3 text-dark text-aling-center">{ mascota.name }</h5>
+
         <div className="card-body">
           <p className="card-text">
             This is a wider card with supporting text below as a natural lead-in
