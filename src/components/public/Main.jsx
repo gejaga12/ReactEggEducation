@@ -11,9 +11,9 @@ export default class Main extends Component {
 
   componentDidMount() {
 
-    RickAndMortyService.traerTodosLosPersonajes()
-    .then((data) => this.setState({ mascotas: data.results }))
-    .catch((error) => console.log(error))
+    // RickAndMortyService.traerTodosLosPersonajes()
+    // .then((data) => this.setState({ mascotas: data.results }))
+    // .catch((error) => console.log(error))
 
   }
 
@@ -41,7 +41,7 @@ export default class Main extends Component {
           </div>
         </section>
 
-       <Cards mascotas= { this.state.mascotas } />
+       <Cards />
 
       </main>
     );
