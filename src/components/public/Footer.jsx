@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Footer = () => {
+
+  const [clicks, setClicks] = useState(0);
+
+  const year = new Date().getFullYear();
+
+  const creadorName = "Gerardo Javier García";
+
+  const handleClick = () => {
+      
+    setClicks(clicks + 1);
+
+  }
+
   return (
-    <div className="container">
+    <div className="d-flex align-items-center justify-content-center">
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p className="col-md-4 mb-0 text-muted">
-          &copy; 2022 Gerardo García Frontend Developer. Inc.
+          &copy; {year} {creadorName} Frontend Developer = {clicks}
         </p>
+
+        <span
+          onClick={handleClick}
+          className="col-md-4 d-flex align-items-center justify-content-center wd-1">
+          <img className="App-logo h-25 w-25" src="dog.png" alt="logo-giratorio" />
+        </span>
 
         <ul className="nav col-md-4 justify-content-end">
           <li className="nav-item">
