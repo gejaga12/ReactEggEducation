@@ -10,7 +10,7 @@ export const Details = () => {
     RickAndMortyService.traerPersonajesPorId(id).then((data) =>
       setMascota(data)
     );
-  }, [id]);
+  }, []);
 
   console.log(mascota);
 
