@@ -2,6 +2,7 @@ import React from "react";
 import emailjs from "@emailjs/browser";
 
 export const Form = () => {
+
   const enviarEmail = (event) => {
     event.preventDefault();
     emailjs
@@ -11,7 +12,11 @@ export const Form = () => {
         event.target,
         "Ohd1HF81dXzB7txRn"
       )
-      .then((response) => console.log(response))
+      .then((response) =>
+        response.status === 200
+          ? alert("Su consulta a sido enviada con exito")
+          : alert("Su consulta no pudo ser enviada")
+      )
       .catch((error) => console.log(error));
   };
 
@@ -29,7 +34,7 @@ export const Form = () => {
               <input type="email" className="form-control" name="user_email" />
             </div>
             <div className="mb-3">
-              <label className="form-label">Comentarios</label>
+              <label className="form-label">Consulta</label>
               <textarea
                 className="form-control"
                 placeholder="Ingrese su consulta"
@@ -37,9 +42,7 @@ export const Form = () => {
               ></textarea>
             </div>
             <div className="d-flex justify-content-center">
-              <button className="btn btn-success mb-3">
-                Enviar
-              </button>
+              <button className="btn btn-success mb-3">Enviar</button>
             </div>
           </form>
         </div>
