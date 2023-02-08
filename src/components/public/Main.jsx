@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import RickAndMortyService from "../../services/RickAndMortyService";
 import { Cards } from "./Cards";
+import { Form } from "./Form"
 
 export default class Main extends Component {
 
@@ -40,7 +40,7 @@ export default class Main extends Component {
             </div>
           </div>
         </section>
-
+        <Form/>
        <Cards />
 
       </main>

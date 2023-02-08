@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useUserForm } from "../../hooks/Custom.hooks";
 
 export const UserForm = () => {
-  const { form, setForm, handleChange } = useUserForm();
+  const { form, handleChange } = useUserForm();
 
   const [areEquals, setAreEquals] = useState(true);
   const [passwordConfirmation, setPasswordConfirmation] = useState();
